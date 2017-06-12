@@ -1,0 +1,3 @@
+.idea/
+/express-server/node_modules/
+/redux-client/node_modules/
