@@ -5,7 +5,7 @@ clone project
      npm install
      npm run start
      
-     server will be  accesible on http://localhost:4040/
+     server will be accesible on http://localhost:4040/
 # step 2. start redux client 
      move back to enovos
      cd redux-client
@@ -13,4 +13,4 @@ clone project
      npm serve-dev
      
      
-     client will be  accesible http://localhost:8082/
+     client will be accesible http://localhost:8082/
