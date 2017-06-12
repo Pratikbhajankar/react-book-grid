@@ -13,4 +13,4 @@ clone project
      npm serve-dev
      
      
-     server will be  accesible http://localhost:8082/
+     client will be  accesible http://localhost:8082/
