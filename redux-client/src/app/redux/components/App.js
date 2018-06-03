@@ -12,7 +12,6 @@ const App = () => (
         <hr />
         <h2>User Details</h2>
         <UserDetails />
-	    <LoadData/>
 	    <DataTable/>
     </div>
 );

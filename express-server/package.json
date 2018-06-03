@@ -10,12 +10,11 @@
     "type": "git",
     "url": "na"
   },
-  "author": "Rahul",
+  "author": "Unknow",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
-    "moment": "^2.18.1",
-    "sqlite3": "^3.1.8"
+    "moment": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

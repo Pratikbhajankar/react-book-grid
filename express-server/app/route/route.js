@@ -9,5 +9,4 @@ module.exports = function(app){
 		next();
 	});
 	app.route("/").get(home.home);
-    app.get("/api/datacheck/:date",home.dataCheck);
 }

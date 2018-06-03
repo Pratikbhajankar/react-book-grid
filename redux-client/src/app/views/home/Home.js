@@ -28,7 +28,7 @@ class Home extends PureComponent {
         })}>
         <Jumbotron>
 	        <div>
-		        <LoadData/>
+		        {/* <LoadData/> */}
 		        <DataTable/>
 	        </div>
 

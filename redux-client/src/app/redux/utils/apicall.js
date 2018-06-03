@@ -8,7 +8,7 @@ function loadData(date)
 	let data = [];
 	$.ajax({
 		method: "GET",
-		url: "http://localhost:4040/api/datacheck/" + date,
+		url: "http://localhost:4040" ,
 		async: false,
 		crossDomain: true,
 		success: function (res)

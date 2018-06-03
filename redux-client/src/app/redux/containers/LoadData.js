@@ -19,7 +19,10 @@ class LoadData extends Component{
 		this.setState({
 			startDate: date
 		});
-		this.props.getDataForDate(moment(date).format(DATE_FORMAT))
+		this.props.getDataForDate()
+	}
+	componentDidMount() {
+		this.props.getDataForDate()
 	}
 	render()
 	{

@@ -8,26 +8,45 @@ class DataTable extends Component {
 		return this.props.dataList.map((data) =>
 		{
 			return (
-				<tr key={data.id}>
-					<td>{data.id}</td>
+				<tr key={data.title}>
+					<td>{data.title}</td>
+					<td>{data.authors[0].first_name}</td>
 					<td>{data.timestamp}</td>
-					<td>{data.name}</td>
-					<td>{data.status}</td>
+					<td>{data.price}</td>
+					<td>{data.amazon_rank}</td>
+					<td>{data.publisher}</td>
+					<td>{data.description}</td>
 				</tr>
 			);
 		});
 	}
-
+	getData(data)
+	{
+		return data && !data.books ? [] : data.books.map((data)=>{
+			return ({
+				id:Math.random(),
+				title:data.title,
+				authors:data.authors[0].first_name,
+				price:data.price,
+				amazon_rank:data.amazon_rank,
+				publisher:data.publisher,
+				description:data.description,
+			})
+		})
+	}
 	render()
 	{
-		console.log("here we go");
+		console.log("here we go ...");
 
 		return (
-			<BootstrapTable data={this.props.dataList} striped hover search>
+			<BootstrapTable data={this.getData(this.props.dataList)} striped hover search pagination>
 			<TableHeaderColumn isKey dataField='id'>SR NO.</TableHeaderColumn>
-			<TableHeaderColumn dataField='name'>Name</TableHeaderColumn>
-			<TableHeaderColumn dataField='status'>status</TableHeaderColumn>
-			<TableHeaderColumn dataField='timestamp'>timestamp</TableHeaderColumn>
+			<TableHeaderColumn dataField='title'>Title</TableHeaderColumn>
+			<TableHeaderColumn dataField='authors'>Authors</TableHeaderColumn>
+			<TableHeaderColumn dataField='price'>Price</TableHeaderColumn>
+			<TableHeaderColumn dataField='amazon_rank'>Amazon rank</TableHeaderColumn>
+			<TableHeaderColumn dataField='publisher'>Publisher</TableHeaderColumn>
+			{/* <TableHeaderColumn dataField='description'>Description</TableHeaderColumn> */}
 		</BootstrapTable>);
 
 	}
